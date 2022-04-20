@@ -8,7 +8,7 @@ argv.forEach((val, index) => {
 	}
 	else if (`${index}` < 2)
 	{
-		out = "Argument not found";
+		out = "No argument";
 	}
 	else
 	{
