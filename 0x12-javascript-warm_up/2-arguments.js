@@ -2,7 +2,7 @@
 const { argv } = require('process');
 let out = [];
 argv.forEach((val, index) => {
-  if (`${index}` === 2) {
+  if (`${index}` === '2') {
     out = 'Argument found';
   } else if (`${index}` < 2) {
     out = 'No argument';
