@@ -5,7 +5,7 @@ def element_at(my_list, idx):
     Args:
         my_list: list to retrieve elements from
         idx: index to retrieve element
-        
+
     The return element is. retrieved element
     """
     if idx < 0:
