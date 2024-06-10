@@ -6,7 +6,7 @@ def print_reversed_list_integer(my_list=[]):
     Return value: reversed list
     """
     new_list = []
-    if my_list == None:
+    if my_list is None:
         return
     new_list = my_list.copy()
     count = len(new_list)
