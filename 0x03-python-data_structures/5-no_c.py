@@ -9,7 +9,6 @@ def no_c(my_string):
     """
     my_list = []
     for letter in my_string:
-        #print(letter)
         my_list.append(letter)
         if letter == 'c':
             my_list.remove(letter)
