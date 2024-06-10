@@ -15,7 +15,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
             a, = tuple_a
             b = 0
     else:
-        a, b = tuple_a
+        a, b, *e = tuple_a
 
     if len(tuple_b) < 2:
         if len(tuple_b) < 1:
@@ -25,7 +25,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
             c, = tuple_b
             d = 0
     else:
-        c, d = tuple_b
+        c, d, *f = tuple_b
 
     e = a + c, b + d
     return e
