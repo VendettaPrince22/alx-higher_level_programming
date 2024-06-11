@@ -8,6 +8,9 @@ def weight_average(my_list=[]):
     Return a number, weighted average
     tuple(<score>, <weight>)
     """
+    if len(my_list) == 0:
+        return 0
+
     new_list = list(map(lambda x: x[0] * x[1], my_list))
     sum = 0
     for i in new_list:
