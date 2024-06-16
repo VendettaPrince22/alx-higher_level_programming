@@ -3,15 +3,17 @@ The ``0-add_integer`` module
 ============================
 
 Using ``add_integer``
---------------------
+=====================
 Returns the sum of its arguments as an integer.
 
 First import ``add_integer`` from the ``0-add_integer`` module:
 
         >>> add_integer = __import__('0-add_integer').add_integer
 
-Using it for numbers:
-
+Now use it:
+numbers
+-------
+::
         >>> add_integer(2, 4)
         6
         >>> add_integer(100, -2)
@@ -23,12 +25,18 @@ Using it for numbers:
         >>> add_integer(0, 0)
         0
 
+non-numbers
+-----------
+::
         >>> add_integer(4, "School")
         Traceback (most recent call last):
+                ...
         TypeError: b must be an integer
         >>> add_integer(None)
         Traceback (most recent call last):
+                ...
         TypeError: a must be an integer
         >>> add_integer('a', 'b')
         Traceback (most recent call last):
+                ...
         TypeError: a must be an integer
