@@ -72,4 +72,4 @@ class Rectangle:
 
     def __repr__(self):
         """String representation of the rectangle object created"""
-        return "Rectangle('" + str(self.width) + "', " + str(self.height) + ")"
+        return str("Rectangle('"+str(self.width)+"', "+str(self.height)+")")
