@@ -66,7 +66,7 @@ class Rectangle:
         string_list = []
         for i in range(self.height):
             for j in range(self.width):
-                string_list.append(self.print_symbol)
+                string_list.append(str(self.print_symbol))
             if i != self.height - 1:
                 string_list.append("\n")
 
