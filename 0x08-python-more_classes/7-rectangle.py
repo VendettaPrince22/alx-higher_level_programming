@@ -9,7 +9,7 @@ class Rectangle:
         height: the height of a rectangle
     """
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initializes the class with a width and haight"""
@@ -66,7 +66,7 @@ class Rectangle:
         string_list = []
         for i in range(self.height):
             for j in range(self.width):
-                string_list.append(type(self).print_symbol)
+                string_list.append(self.print_symbol)
             if i != self.height - 1:
                 string_list.append("\n")
 
