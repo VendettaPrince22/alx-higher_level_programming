@@ -9,5 +9,5 @@ def lookup(obj):
     Returns:
         list of available attributes and methods
     """
-    my_list = obj.__dict__.keys()
+    my_list = dir(obj)
     return my_list
