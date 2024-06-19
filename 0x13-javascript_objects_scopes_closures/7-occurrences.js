@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-exports.nbOccurrences = function (list, searchElement) {
+exports.nbOccurences = function (list, searchElement) {
   let i = 0;
   let count = 0;
 
