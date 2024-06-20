@@ -13,8 +13,8 @@ db = MySQLdb.connect(host="localhost",
                      user=MY_USER,
                      db=MY_DB)
 cur = db.cursor()
-sql = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-cur.execute(sql, (filter_value, ))
+sql = "SELECT * FROM states WHERE name = '{:s}' ORDER BY states.id"
+cur.execute(sql.format(filter_value))
 myresult = cur.fetchall()
 
 for x in myresult:
