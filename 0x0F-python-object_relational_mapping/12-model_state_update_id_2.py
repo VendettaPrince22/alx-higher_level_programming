@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    session.query(State).filter(State.id == 2).\
-        update({State.name == 'New Mexico'}, synchronize_session='evaluate')
+    new_instance = session.query(State).filter_by(id == 2).first()
+    new_instance = 'New Mexico'
 
     session.commit()
