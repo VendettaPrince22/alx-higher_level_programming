@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities_objects = session.query(State.name, State.id, City.name)\
+    cities_objects = session.query(State.name, City.id, City.name)\
         .join(City).all()
 
     for x in cities_objects:
