@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Adds the State object `Louisiana` to a database"""
 from model_state import Base, State
 import sys
 from sqlalchemy import create_engine
