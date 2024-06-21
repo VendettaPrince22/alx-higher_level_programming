@@ -15,6 +15,14 @@ class Square(Rectangle):
         """Initializes the square object"""
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+
     def __str__(self):
         """Overloading representation for square object"""
         return "[Square] ({}) {}/{} - {}".format(
