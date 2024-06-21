@@ -13,9 +13,13 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(MY_USER, MY_PASS, MY_DB),
                            pool_pre_ping=True)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    for id, name in session.query(State.id, State.name).filter(State.id == 1):
-        print("{}: {}".format(id, name))
+    instance = session.query(State).first()
+    if instance is None:
+        print("Nothing")
+    else:
+        print("{}: {}".format(instance.id, instance.name))
