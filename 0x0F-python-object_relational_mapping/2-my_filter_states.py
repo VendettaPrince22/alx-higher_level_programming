@@ -15,7 +15,8 @@ if __name__ == "__main__":
                          user=MY_USER,
                          db=MY_DB)
     cur = db.cursor()
-    sql = "SELECT * FROM states WHERE name = '{:s}' ORDER BY states.id"
+    sql = "SELECT * FROM states WHERE name LIKE BINARY '{:s}' \
+            ORDER BY states.id"
     cur.execute(sql.format(filter_value))
     myresult = cur.fetchall()
 
