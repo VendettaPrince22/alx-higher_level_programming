@@ -98,8 +98,9 @@ class Rectangle(Base):
             .format(self.id, self.__x, self.__y,
                     self.__width, self.__height)
 
-    def update(self, *args):
-        """Assigns an argument to each attribute"""
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute,
+        Assigns key/value argument to attributes"""
         if len(args) == 1:
             self.id = args[0]
         elif len(args) == 2:
@@ -110,3 +111,14 @@ class Rectangle(Base):
             self.__x = args[3]
         elif len(args) == 5:
             self.__y = args[4]
+
+        if 'height' in kwargs.keys():
+            self.__height = kwargs['height']
+        if 'width' in kwargs.keys():
+            self.__width = kwargs['width']
+        if 'x' in kwargs.keys():
+            self.__x = kwargs['x']
+        if 'y' in kwargs.keys():
+            self.__y = kwargs['y']
+        if 'id' in kwargs.keys():
+            self.id = kwargs['id']
