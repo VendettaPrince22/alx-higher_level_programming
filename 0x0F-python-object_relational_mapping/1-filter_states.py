@@ -14,7 +14,8 @@ if __name__ == "__main__":
                          user=MY_USER,
                          db=MY_DB)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+    cur.execute("SELECT * FROM states WHERE name \
+                LIKE BINARY 'N%' ORDER BY states.id")
     myresult = cur.fetchall()
 
     for x in myresult:
