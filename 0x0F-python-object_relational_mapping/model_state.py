@@ -10,4 +10,4 @@ class State(Base):
     """Class State defining a segment for database SQLAlchemy"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
-    name = Column(String(128))
+    name = Column(String(128), nullable=False)
