@@ -7,8 +7,8 @@ if __name__ == "__main__":
     import requests
 
     url = 'http://0.0.0.0:5000/search_user'
-    if len(sys.argv) == 3:
-        payload = {'q': sys.argv[2]}
+    if len(sys.argv) == 2:
+        payload = {'q': sys.argv[1]}
     else:
         payload = {'q': ""}
 
